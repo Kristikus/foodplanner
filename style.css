@@ -12,20 +12,20 @@
 
 /* Personalized colors */
 
-color-secondary {
+.color-secondary {
     color: var(--secondary);
 }
 
-color-tertiary {
+.color-tertiary {
     color: var(--tertiary);
 }
 
-bk-secondary {
-    color: var(--secondary);
+.bk-secondary {
+    background-color: var(--secondary);
 }
 
-bk-tertiary {
-    color: var(--tertiary);
+.bk-tertiary {
+    background-color: var(--tertiary);
 }
 
 
