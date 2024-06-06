@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFF5E4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.logo {
+    height: 40px;
+}
+
+.title {
+    font-family: 'Kavoon', cursive;
+    font-size: 62px;
+    color: #2B3D4F;
+    margin-top: 25px; /* Distance from the top */
+    margin-bottom: 90px; /* Distance between title and description */
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #2B3D4F;
+    margin-bottom: 70px;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.registration-form {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background-color: #2B3D4F;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    background-color: #1F2A35;
+}
+
+.signin-prompt a {
+    color: #1C7A8E;
+    text-decoration: none;
+}
+
+.signin-prompt a:hover {
+    text-decoration: underline;
+}
