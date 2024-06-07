@@ -1,7 +1,36 @@
-/* Consolidated CSS styles */
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kavoon&display=swap');
+
+:root {
+    --primary: #FFF5E4;
+    --secondary: #2B3D4F;
+    --tertiary: #1C7A8E;
+    --light: white;
+    --dark: #444;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+}
+
+/* Personalized colors */
+.color-secondary {
+    color: var(--secondary);
+}
+
+.color-tertiary {
+    color: var(--tertiary);
+}
+
+.bk-secondary {
+    background-color: var(--secondary);
+}
+
+.bk-tertiary {
+    background-color: var(--tertiary);
+}
+
+/* Structure */
 body {
+    background-color: var(--primary);
     font-family: 'Inter', sans-serif;
-    background-color: #FFF5E4;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,16 +38,21 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    font-family: Kavoon, Verdana, Tahoma, sans-serif;
+    color: var(--secondary);
+}
+
 h1.title {
     font-family: 'Kavoon', cursive;
     font-size: 3rem;
-    color: #2B3D4F;
+    color: var(--secondary);
     margin-top: 2rem;
 }
 
 p.description {
     font-size: 1.25rem;
-    color: #2B3D4F;
+    color: var(--secondary);
     margin: 1rem 0;
 }
 
@@ -30,11 +64,11 @@ p.description {
 
 .signin-prompt {
     font-size: 0.9rem;
-    color: #2B3D4F;
+    color: var(--secondary);
 }
 
 footer {
-    background-color: #2B3D4F;
+    background-color: var(--secondary);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -49,7 +83,7 @@ footer img {
 
 /* Navbar styles */
 .navbar {
-    background-color: #2B3D4F;
+    background-color: var(--secondary);
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -91,7 +125,7 @@ footer img {
 
 /* Mobile navbar styles */
 .bg-dark {
-    background-color: #2B3D4F !important;
+    background-color: var(--secondary) !important;
 }
 
 .bg-dark .nav-link {
