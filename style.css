@@ -12,19 +12,19 @@
 
 /* Personalized colors */
 
-color-secondary {
+.color-secondary {
     color: var(--secondary);
 }
 
-color-tertiary {
+.color-tertiary {
     color: var(--tertiary);
 }
 
-bk-secondary {
-    color: var(--secondary);
+.bk-secondary {
+    background-color: var(--secondary);
 }
 
-bk-tertiary {
+.bk-tertiary {
     color: var(--tertiary);
 }
 
@@ -42,5 +42,13 @@ h1 {
 
 
 
+/* Planning */
 
+.no-border {
+    border: none;
+}
 
+hr {
+    width: 50px;
+    margin: auto;
+}
