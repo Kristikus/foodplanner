@@ -1,0 +1,128 @@
+[
+    {
+        "id": "recette1",
+        "titre": "Crêpes au miel",
+        "categorie": "Petit-déjeuner",
+        "description": "Délicieuses crêpes garnies de miel, parfaites pour commencer la journée."
+    },
+    {
+        "id": "recette2",
+        "titre": "Omelette aux herbes",
+        "categorie": "Petit-déjeuner",
+        "description": "Omelette légère et moelleuse, préparée avec des herbes fraîches et des épices."
+    },
+    {
+        "id": "recette3",
+        "titre": "Pain perdu",
+        "categorie": "Petit-déjeuner",
+        "description": "Pain perdu doré et croustillant, servi avec du sirop d'érable."
+    },
+    {
+        "id": "recette4",
+        "titre": "Smoothie aux fruits rouges",
+        "categorie": "Petit-déjeuner",
+        "description": "Un smoothie rafraîchissant et nutritif à base de fruits rouges et de yaourt."
+    },
+    {
+        "id": "recette5",
+        "titre": "Granola maison",
+        "categorie": "Petit-déjeuner",
+        "description": "Granola croquant préparé avec des noix, des graines et des fruits secs."
+    },
+    {
+        "id": "recette6",
+        "titre": "Porridge à l'avoine",
+        "categorie": "Petit-déjeuner",
+        "description": "Porridge chaud et crémeux à base de flocons d'avoine, de lait et de fruits frais."
+    },
+    {
+        "id": "recette7",
+        "titre": "Bagel au saumon fumé",
+        "categorie": "Petit-déjeuner",
+        "description": "Bagel garni de saumon fumé, de fromage frais et de tranches de concombre."
+    },
+    {
+        "id": "recette8",
+        "titre": "Yaourt aux fruits et granola",
+        "categorie": "Petit-déjeuner",
+        "description": "Un bol de yaourt nature garni de fruits frais et de granola croquant."
+    },
+    {
+        "id": "recette9",
+        "titre": "Muffins aux myrtilles",
+        "categorie": "Petit-déjeuner",
+        "description": "Muffins moelleux aux myrtilles, parfaits pour le petit-déjeuner ou une collation."
+    },
+    {
+        "id": "recette10",
+        "titre": "Croissants au beurre",
+        "categorie": "Petit-déjeuner",
+        "description": "Des croissants au beurre croustillants et dorés, parfaits pour le petit-déjeuner."
+    },
+    {
+        "id": "recette11",
+        "titre": "Poulet rôti au four",
+        "categorie": "Plat principal",
+        "description": "Recette simple pour préparer un délicieux poulet rôti au four avec des herbes aromatiques et des légumes."
+    },
+    {
+        "id": "recette12",
+        "titre": "Pâtes à la carbonara",
+        "categorie": "Plat principal",
+        "description": "Les authentiques pâtes à la carbonara italiennes, préparées avec des œufs, du fromage pecorino, du pancetta et du poivre noir."
+    },
+    {
+        "id": "recette13",
+        "titre": "Risotto aux champignons",
+        "categorie": "Plat principal",
+        "description": "Un risotto crémeux et parfumé aux champignons, préparé avec du riz Arborio, du bouillon de légumes et du parmesan."
+    },
+    {
+        "id": "recette14",
+        "titre": "Sushi au saumon",
+        "categorie": "Plat principal",
+        "description": "Des sushis fraîchement préparés avec du riz vinaigré, du saumon cru, de l'avocat et de la sauce soja."
+    },
+    {
+        "id": "recette15",
+        "titre": "Pâtes à la bolognaise",
+        "categorie": "Plat principal",
+        "description": "Des pâtes savoureuses avec une sauce bolognaise maison, préparée avec du bœuf haché, des tomates, des carottes et des oignons."
+    },
+    {
+        "id": "recette16",
+        "titre": "Omelette aux champignons",
+        "categorie": "Plat principal",
+        "description": "Une omelette légère et moelleuse garnie de champignons sautés, de fromage râpé et de persil frais."
+    },
+    {
+        "id": "recette17",
+        "titre": "Poulet au curry",
+        "categorie": "Plat principal",
+        "description": "Un délicieux poulet au curry épicé, servi avec du riz basmati et des légumes croquants."
+    },
+    {
+        "id": "recette18",
+        "titre": "Pizza Margherita",
+        "categorie": "Plat principal",
+        "description": "Une pizza Margherita traditionnelle avec de la sauce tomate, de la mozzarella fraîche, des tomates cerises et du basilic frais."
+    },
+    {
+        "id": "recette19",
+        "titre": "Pizza",
+        "categorie": "Plat principal",
+        "description": "Une autre pizza."
+    },
+    {
+        "id": "recette20",
+        "titre": "Ratatouille",
+        "categorie": "Plat principal",
+        "description": "Une ratatouille provençale traditionnelle avec des légumes frais comme des courgettes, des aubergines, des poivrons, des tomates et des herbes de Provence."
+    },
+    {
+        "id": "recette21",
+        "titre": "Boeuf Bourguignon",
+        "categorie": "Plat principal",
+        "description": "Un plat classique de boeuf mijoté dans une sauce au vin rouge avec des carottes, des oignons et des champignons."
+    }
+]
