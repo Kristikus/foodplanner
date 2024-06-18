@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodplanner - Connexion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kavoon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav desktop -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto" href="#"><img src="img/logo.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="planning.html">Planning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav mobile -->
+    <div class="collapse" id="navbarToggleExternalContent"
+        data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <h5 class="text-body-emphasis h4"><a href="planning.html"
+                    class="nav-link text-light">Planning</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="recipes.html"
+                    class="nav-link text-light">Recipes</a></h5>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main -->
+    <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1 text-center">
+        <h1 class="title">Foodplanner</h1>
+        <p class="description">
+            <b>Glad to see you back !</b>
+            <div style="color: #2B3D4F; font-size: 50px; height: 130px;">&#x1F642;</div>
+        </p>
+        <div class="w-75 mt-4">
+            <form class="login-form p-4">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Log in</button>
+                <p class="signin-prompt mt-3">
+                    No account yet? <a href="signup.html">Click here to sign up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img src="img/logo.png" alt="Logo">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
