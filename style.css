@@ -42,5 +42,13 @@ h1 {
 
 
 
+/* Planning */
 
+.no-border {
+    border: none;
+}
 
+hr {
+    width: 50px;
+    margin: auto;
+}
