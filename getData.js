@@ -6,7 +6,6 @@ export function getData(url) {
     },
   })
     .then((response) => {
-      console.log(response);
       if (!response.ok) {
         console.log('La requête a échoué');
       }
