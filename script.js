@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     // Check if the user is logged in to know which navigation bar to display
     var loggedInUser = localStorage.getItem('loggedInUser');
