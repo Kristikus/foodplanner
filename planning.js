@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <h2 class="card-header bk-secondary text-white rounded-top-4">
             ${day}
           </h2>
+          <div>
           <ul class="list-group list-group-flush">
             <h3 class="fs-5 mb-0 mt-3 fw-bold">Breakfast :</h3>
             <li class="list-group-item no-border" data-category="breakfast"></li>
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alt="icon for generate a new recipe">
             </a>
           </ul>
+          </div>
         </div>
       </div>
     `;

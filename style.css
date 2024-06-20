@@ -165,3 +165,10 @@ hr {
 .last-card-item {
     margin-bottom: 7rem !important;
 }
+
+.card > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+}
