@@ -10,8 +10,18 @@
     font-family: Inter, Verdana, Tahoma, sans-serif;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+
 
 /* Personalized colors */
+
+.color-light {
+    color: var(--light);
+}
 
 .color-secondary {
     color: var(--secondary);
@@ -32,43 +42,49 @@
 
 /* Structure */
 
-body {
-    background-color: var(--primary);
-}
-
 h1 {
-    font-family: Kavoon, Verdana, Tahoma, sans-serif;
-    color: var(--secondary);
-}
-
-
-h1.title {
     font-family: 'Kavoon', cursive;
     font-size: 3rem;
     color: var(--secondary);
-    margin-top: 2rem;
+    margin: 5rem 0 2.5rem;
 }
 
 p.description {
     font-size: 1.25rem;
     color: var(--secondary);
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 
-.registration-form {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.global-form {
+    background-color: var(--light);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 7rem;
+}
+
+label {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    margin-bottom: 0.75rem;
 }
 
 .signin-prompt {
     font-size: 0.9rem;
     color: var(--secondary);
+    text-decoration: none;
+}
+
+.signin-prompt-link {
+    text-decoration: none;
+    color: var(--tertiary);
 }
 
 footer {
     background-color: var(--secondary);
-    color: white;
+    color: var(--light);
     text-align: center;
     padding: 1rem 0;
     position: absolute;
@@ -86,7 +102,7 @@ footer img {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white;
+    color: var(--light);
 }
 
 .navbar-dark .navbar-brand img {
@@ -142,4 +158,26 @@ footer img {
 .bg-dark .nav-link {
     color: white;
     text-decoration: none;
+}
+
+/* Planning */
+
+.no-border {
+    border: none;
+}
+
+hr {
+    width: 50px;
+    margin: auto;
+}
+
+.last-card-item {
+    margin-bottom: 7rem !important;
+}
+
+.card > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
 }
