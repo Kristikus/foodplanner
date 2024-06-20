@@ -99,6 +99,7 @@ footer img {
 /* Navbar styles */
 .navbar {
     background-color: var(--secondary);
+    padding: 2.2rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
