@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodplanner - Inscription</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kavoon&display=swap" rel="stylesheet">
+
+   
 </head>
 <body>
-    <!-- Nav desktop -->
+    <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand mx-auto" href="#"><img src="img/logo.png" alt="Logo"></a>
+            <a class="navbar-brand mx-auto " href="#"><img src="img/logo.png" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="planning.html">Planning</a>
@@ -30,28 +31,18 @@
         </div>
     </nav>
 
-    <!-- Nav mobile -->
-    <div class="collapse" id="navbarToggleExternalContent"
-        data-bs-theme="dark">
-        <div class="bg-dark p-4">
-            <h5 class="text-body-emphasis h4"><a href="planning.html"
-                    class="nav-link text-light">Planning</a></h5>
-            <h5 class="text-body-emphasis h4"><a href="recipes.html"
-                    class="nav-link text-light">Recipes</a></h5>
-        </div>
-    </div>
-
 
     <!-- Main -->
-    <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1 text-center">
-        <h1 class="title">Foodplanner</h1>
-        <p class="description">
+    <main class="container d-flex flex-column align-items-center justify-content-center flex-grow-1">
+        <h1>Foodplanner</h1>
+        <p class="description text-center">
             Simplify your daily life <br>
             and get varied and tasty recipes every week <br>
             integrated directly into your schedule. All generated automatically for you.
         </p>
         <div class="w-75 mt-4">
-            <form class="registration-form p-4">
+            <form class="global-form p-4 d-flex flex-column">
+                <h2 class="text-center mt-2 mb-3">Create my account</h2>
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" class="form-control" required>
@@ -64,22 +55,22 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary btn-block w-50 text-center color-light bk-secondary border-0" type="submit">Sign up</button>
+                </div>
                 <p class="signin-prompt mt-3">
-                    Have an account? <a href="login.html">Click here to sign in</a>
+                    Have an account ? <a href="login.html" class="signin-prompt-link">Click here to sign in</a>
                 </p>
             </form>
         </div>
-    </div>
+    </main>
     
     <!-- Footer -->
     <footer>
         <img src="img/logo.png" alt="Logo">
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

@@ -16,30 +16,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   daysOfWeek.forEach((day) => {
     cardContainer.innerHTML += `
-      <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+      <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
         <div class="card text-center rounded-4">
           <h2 class="card-header bk-secondary text-white rounded-top-4">
             ${day}
           </h2>
           <ul class="list-group list-group-flush">
-            <h3 class="fs-5 mb-0 mt-3 fst-italic">Breakfast :</h3>
+            <h3 class="fs-5 mb-0 mt-3 fw-bold">Breakfast :</h3>
             <li class="list-group-item no-border" data-category="breakfast"></li>
             <a class="icon-link" href="#" data-link="breakfast">
-              <img class="m-auto mb-3 mt-2 img-thumbnail" src="./img/arrow-repeat.svg"
+              <img class="m-auto mb-3 mt-2" src="./img/arrow-repeat.svg"
                 alt="icon for generate a new recipe">
             </a>
             <hr>
-            <h3 class="fs-5 mb-0 mt-3 fst-italic">Lunch :</h3>
+            <h3 class="fs-5 mb-0 mt-3 fw-bold">Lunch :</h3>
             <li class="list-group-item no-border" data-category="main-course"></li>
             <a class="icon-link" href="#" data-link="main-course">
-              <img class="m-auto mb-3 mt-2 img-thumbnail" src="./img/arrow-repeat.svg"
+              <img class="m-auto mb-3 mt-2" src="./img/arrow-repeat.svg"
                 alt="icon for generate a new recipe">
             </a>
             <hr>
-            <h3 class="fs-5 mb-0 mt-3 fst-italic">Dinner :</h3>
+            <h3 class="fs-5 mb-0 mt-3 fw-bold">Dinner :</h3>
             <li class="list-group-item no-border" data-category="main-course"></li>
             <a class="icon-link" href="#" data-link="main-course">
-              <img class="m-auto mb-3 mt-2 img-thumbnail" src="./img/arrow-repeat.svg"
+              <img class="m-auto mb-3 mt-2" src="./img/arrow-repeat.svg"
                 alt="icon for generate a new recipe">
             </a>
           </ul>
@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
   });
+
+  const cardItems = document.querySelectorAll('.card-item');
+  cardItems[cardItems.length - 1].classList.add('last-card-item');
+  
 
   const baseUrl = API_KEY;
 
