@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!loggedInUser) {
         // Show nav if user is not logged in
         document.querySelector('.nav-not-connected').style.display = 'block';
-    } else {
+    } 
+    else {
         // Redirect the logged in user to the planning page
         if (window.location.pathname !== '/planning.html') {
             window.location.href = 'planning.html';
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         logoutButton.addEventListener('click', function() {
             localStorage.removeItem('loggedInUser');
             alert('Déconnexion réussie!');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         });
     }
 });
@@ -131,4 +132,5 @@ function displayLoggedInNav() {
 
 function displayLoggedOutNav() {
     document.querySelector('.nav-not-connected').style.display = 'block';
+    document.querySelector('.navbar').style.display = 'none';
 }

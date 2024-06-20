@@ -99,6 +99,7 @@ footer img {
 /* Navbar styles */
 .navbar {
     background-color: var(--secondary);
+   
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -133,15 +134,18 @@ footer img {
 .nav-not-connected {
     background-color: #2B3D4F;
     display: none;
+    padding: 1.9rem;
 }
+
 
 .navbar-brand img {
     height: 40px;
+  
 }
 
 .navbar-brand-if-not-connected {
     height: 40px;
-    display: none;
+    /* display: none; */
 }
 
 @media (max-width: 991.98px) {
