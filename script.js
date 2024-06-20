@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var loggedInUser = localStorage.getItem('loggedInUser');
     if (!loggedInUser) {
         // Show nav if user is not logged in
-        document.querySelector('.nav-not-connected').style.display = 'none';
+        document.querySelector('.nav-not-connected').style.display = 'block';
     } 
     else {
         // Redirect the logged in user to the planning page
@@ -132,5 +132,5 @@ function displayLoggedInNav() {
 
 function displayLoggedOutNav() {
     document.querySelector('.nav-not-connected').style.display = 'block';
-    document.querySelector('#navbar-menu').style.display = 'none';
+    document.querySelector('.navbar').style.display = 'none';
 }
