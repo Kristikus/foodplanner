@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 alt="icon for generate a new recipe">
             </a>
           </ul>
-          </div>
         </div>
       </div>
     `;
