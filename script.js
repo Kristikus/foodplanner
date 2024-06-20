@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
     else {
         // Redirect the logged in user to the planning page
-        if (window.location.pathname !== '/planning.html') {
+        if (window.location.pathname === '/login.html' || window.location.pathname === '/signup.html') {
             window.location.href = 'planning.html';
         }
 };
