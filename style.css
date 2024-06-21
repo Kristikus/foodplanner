@@ -10,7 +10,18 @@
     font-family: Inter, Verdana, Tahoma, sans-serif;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+
+
 /* Personalized colors */
+
+.color-light {
+    color: var(--light);
+}
 
 .color-secondary {
     color: var(--secondary);
@@ -31,16 +42,146 @@
 
 /* Structure */
 
-body {
-    background-color: var(--primary);
-}
-
 h1 {
-    font-family: Kavoon, Verdana, Tahoma, sans-serif;
+    font-family: 'Kavoon', cursive;
+    font-size: 3rem;
     color: var(--secondary);
+    margin: 5rem 0 2.5rem;
+}
+
+p.description {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    margin: 1.2rem 0;
+}
+
+.global-form {
+    background-color: var(--light);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 7rem;
+}
+
+label {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    margin-bottom: 0.75rem;
+}
+
+.signin-prompt {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.signin-prompt-link {
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+footer {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 40px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--secondary);
+   
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--light);
+}
+
+.navbar-dark .navbar-brand img {
+    height: 40px;
+}
+
+/* Center the logo and right-align the nav items */
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
 }
 
 
+/* Nav styles when users are not connected */
+.nav-not-connected {
+    background-color: #2B3D4F;
+    display: none;
+    padding: 1.8rem;
+}
 
 
+.navbar-brand img {
+    height: 40px;
+  
+}
 
+.navbar-brand-if-not-connected {
+    height: 40px;
+    /* display: none; */
+}
+
+@media (max-width: 991.98px) {
+    .nav-not-connected {
+        display: block;
+    }
+}
+
+/* Mobile navbar styles */
+.bg-dark {
+    background-color: var(--secondary) !important;
+}
+
+.bg-dark .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Planning */
+
+.no-border {
+    border: none;
+}
+
+hr {
+    width: 50px;
+    margin: auto;
+}
+
+.last-card-item {
+    margin-bottom: 7rem !important;
+}
+
+.card > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+}
