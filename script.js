@@ -64,10 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!loggedInUser) {
         // Show nav if user is not logged in
         document.querySelector('.nav-not-connected').style.display = 'block';
+        // Redirect the user to the login page if he tries to go on the planning page while not logged in
+        if (window.location.pathname === '/planning.html') {
+            window.location.href = 'login.html';
+        }
+        
     } 
     else {
         // Redirect the logged in user to the planning page
-        if (window.location.pathname !== '/planning.html') {
+        if (window.location.pathname === '/login.html' || window.location.pathname === '/signup.html') {
             window.location.href = 'planning.html';
         }
 };
