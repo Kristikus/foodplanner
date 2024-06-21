@@ -139,3 +139,4 @@ function displayLoggedOutNav() {
     document.querySelector('.nav-not-connected').style.display = 'block';
     document.querySelector('.navbar').style.display = 'none';
 }
+

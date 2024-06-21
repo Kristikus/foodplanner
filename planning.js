@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recipeLocations.forEach((recipeLocation, index) => {
           const recipe = recipes[index];
-          recipeLocation.textContent = recipe?.title;
+         // Make the recipe title clickable and store the recipe ID
+          recipeLocation.innerHTML = `<a href="#" class="recipe-link">${recipe?.title}</a>`;
+          recipeLocation.dataset.recipeId = recipe?.id;
+
         });
 
         // generate a new recipe by clicking on the links with icon
@@ -88,7 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const recipeLocations = document.querySelectorAll(selector);
         const recipeLocation = recipeLocations[index];
-        recipeLocation.textContent = data[index].title;
+        // Make the recipe title clickable and store the recipe ID
+        recipeLocation.innerHTML = `<a href="#" class="recipe-link">${data[index].title}</a>`;
+        recipeLocation.dataset.recipeId = data[index].id;
+
       })
       .catch((error) => {
         console.error(error.message);
@@ -106,3 +112,19 @@ document.addEventListener('DOMContentLoaded', function () {
     '[data-link="main-course"]'
   );
 });
+
+// Add a global event listener for clicks on recipe links
+document.addEventListener('click', function (e) {
+  // Check if the clicked element is a recipe link
+  if (e.target && e.target.classList.contains('recipe-link')) {
+    e.preventDefault(); // Prevent the default link attitude
+    const recipeId = e.target.parentElement.dataset.recipeId; // Get the recipe ID stored in the data 
+    openRecipeDetails(recipeId); // Open the recipe 
+  }
+});
+
+// Function to open the recipe details in a new window
+function openRecipeDetails(recipeId) {
+  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`;
+  window.open(url, '_blank'); // Open the URL in a new window
+}
