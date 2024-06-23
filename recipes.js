@@ -1,5 +1,5 @@
 import { getData } from './getData.js';
-import { API_KEY } from './api_key.js';
+import { URL_RANDOM_RECIPE } from './api_key.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const cardContainer = document.getElementById('recipes');
@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     event.target.src = defaultImage;
   }
 
-  const baseUrl = API_KEY;
+  const baseUrlRandom = URL_RANDOM_RECIPE;
 
   function getCardRecipes(url) {
     return getData(url).then((data) => {
       for (let i = 0; i < 28; i++) {
-
         const title = data?.recipes[i].title;
         let image = data?.recipes[i].image;
 
@@ -34,31 +33,52 @@ document.addEventListener('DOMContentLoaded', function () {
         let textSummaryDescription = div.textContent || div.innerText;
 
         cardContainer.innerHTML += `
-            <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-4" >
-                <div class="card">
-                    <img src=${image} class="card-img object-fit-cover" alt="...">
-                    <div class="card-body d-flex flex-column gap-4">
-                        <h2 class="card-title text-center">${title}</h2>
-                        <p class="card-text">${textSummaryDescription}</p>
-                        <div>
-                            <a href="#" class="btn btn-primary bk-secondary border-0" >Voir la recette</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-5 " >
+            <div class="card">
+              <img src=${image} class="card-img object-fit-cover" alt="...">
+              <div class="card-body d-flex flex-column gap-4">
+                <h2 class="card-title text-center h4">${title}</h2>
+                <p class="card-text">${textSummaryDescription}</p>
+                  <a href="#" class="btn btn-primary bk-secondary border-0" >Voir la recette</a>
+              </div>
             </div>
-            `;
+          </div>
+        `;
       }
 
       const img = document.querySelector('.card-img-top');
       if(img !== null) {
         img.onerror = imgError;
-      } 
+      }
 
       const cardItem = document.querySelectorAll('.card-item');
       cardItem[cardItem.length - 1].classList.add('last-card-item');
     });
   }
 
-  getCardRecipes(`${baseUrl}&number=28`);
+  getCardRecipes(`${baseUrlRandom}&number=28`);
 
+
+  function getFilteredRecipes(selector, url) {
+    const btnFilter = document.getElementById(selector);
+    btnFilter.addEventListener('click', function (e) {
+      e.preventDefault();
+      cardContainer.innerHTML = '';
+      getCardRecipes(url);
+    });
+  }
+
+  getFilteredRecipes(
+    'btn-filter-breakfast',
+    `${baseUrlRandom}&number=28&include-tags=breakfast`
+  );
+  getFilteredRecipes(
+    'btn-filter-main',
+    `${baseUrlRandom}&number=28&include-tags=main%20course`
+  );
+  getFilteredRecipes(
+    'btn-filter-dessert',
+    `${baseUrlRandom}&number=28&include-tags=dessert`
+  );
+  getFilteredRecipes('btn-filter-random', `${baseUrlRandom}&number=28`);
 });

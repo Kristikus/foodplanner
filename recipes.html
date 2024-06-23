@@ -15,7 +15,7 @@
 
 <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand mx-auto " href="#"><img src="img/logo.png" alt="Logo"></a>
             <div id="navbar-menu">
@@ -49,11 +49,20 @@
 
 
     <main>
+        <div class="d-flex justify-content-center align-items-center mt-5 gap-4 gap-md-5 flex-wrap">
+            <button id="btn-filter-breakfast" type="submit" class="btn btn-primary bk-secondary border-0 rounded-5">Breakfast</button>
+            <button id="btn-filter-main" type="submit" class="btn btn-primary bk-secondary border-0 rounded-5">Main dish</button>
+            <button id="btn-filter-dessert" type="submit" class="btn btn-primary bk-secondary border-0 rounded-5">Dessert</button>
+            <button id="btn-filter-random" type="submit" class="btn btn-primary bk-secondary border-0 rounded-5">Random</button>
+        </div>
         <h1 class="text-center">Recipes</h1>
         <div class="container">
             <div class="row" id="recipes">
 
             </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="#nav" class="btn btn-primary bk-secondary border-0 rounded-5 last-card-item">Back to top</a>
         </div>
     </main>
 
