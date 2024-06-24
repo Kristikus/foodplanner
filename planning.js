@@ -1,5 +1,6 @@
 import { getData } from './getData.js';
 import { URL_RANDOM_RECIPE } from './api_key.js';
+import { API_KEY } from './api_key.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const daysOfWeek = [
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const cardContainer = document.getElementById('cards');
 
   daysOfWeek.forEach((day) => {
-    cardContainer.innerHTML += `
+    if (cardContainer) {
+      cardContainer.innerHTML += `
       <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
         <div class="card text-center rounded-4">
           <h2 class="card-header bk-secondary text-white rounded-top-4">
@@ -47,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       </div>
     `;
+    }
   });
 
   const cardItems = document.querySelectorAll('.card-item');
   cardItems[cardItems.length - 1].classList.add('last-card-item');
-  
 
-  const baseUrl = URL_RANDOM_RECIPE;
+  const baseUrlRandomRecipes = URL_RANDOM_RECIPE;
 
   function getRecipes(url, selector, link) {
     return getData(url)
@@ -64,7 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recipeLocations.forEach((recipeLocation, index) => {
           const recipe = recipes[index];
-          recipeLocation.textContent = recipe?.title;
+
+          // Make the recipe title clickable and store the recipe ID
+          recipeLocation.innerHTML = `<a href="#" class="recipe-link">${recipe?.title}</a>`;
+          recipeLocation.dataset.recipeId = recipe?.id;
         });
 
         // generate a new recipe by clicking on the links with icon
@@ -88,7 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const recipeLocations = document.querySelectorAll(selector);
         const recipeLocation = recipeLocations[index];
-        recipeLocation.textContent = data[index].title;
+        // Make the recipe title clickable and store the recipe ID
+        recipeLocation.innerHTML = `<a href="#" class="recipe-link">${data[index].title}</a>`;
+        recipeLocation.dataset.recipeId = data[index].id;
       })
       .catch((error) => {
         console.error(error.message);
@@ -96,13 +103,42 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   getRecipes(
-    `${baseUrl}&number=7&include-tags=breakfast`,
+    `${baseUrlRandomRecipes}&number=7&include-tags=breakfast`,
     '[data-category="breakfast"]',
     '[data-link="breakfast"]'
   );
   getRecipes(
-    `${baseUrl}&number=14&include-tags=main%20course`,
+    `${baseUrlRandomRecipes}&number=14&include-tags=main%20course`,
     '[data-category="main-course"]',
     '[data-link="main-course"]'
   );
 });
+
+// Add a global event listener for clicks on recipe links
+document.addEventListener('click', function (e) {
+  // Check if the clicked element is a recipe link
+  if (e.target && e.target.classList.contains('recipe-link')) {
+    e.preventDefault(); // Prevent the default link attitude
+    const recipeId = e.target.parentElement.dataset.recipeId; // Get the recipe ID stored in the data
+
+    openRecipeDetails(
+      `https://api.spoonacular.com/recipes/${recipeId}/card?apiKey=${API_KEY}`
+    );
+  }
+});
+
+// Function to open the recipe details in a new window
+
+function openRecipeDetails(url) {
+  getData(url)
+    .then((data) => {
+      const dataUrl = data.url;
+
+      sessionStorage.setItem('dataUrl', JSON.stringify(dataUrl));
+
+      location.href = 'recipe.html';
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
+}
