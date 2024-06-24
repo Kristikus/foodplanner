@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show nav if user is not logged in
         document.querySelector('.nav-not-connected').style.display = 'block';
         // Redirect the user to the login page if he tries to go on the planning page while not logged in
-        if (window.location.pathname === '/planning.html') {
+        if (window.location.pathname === '/planning.html' || window.location.pathname === '/recipes.html') {
             window.location.href = 'login.html';
         }
         

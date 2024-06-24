@@ -1,5 +1,5 @@
 import { getData } from './getData.js';
-import { API_KEY } from './api_key.js';
+import { URL_RANDOM_RECIPE } from './api_key.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const daysOfWeek = [
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   cardItems[cardItems.length - 1].classList.add('last-card-item');
   
 
-  const baseUrl = API_KEY;
+  const baseUrl = URL_RANDOM_RECIPE;
 
   function getRecipes(url, selector, link) {
     return getData(url)
