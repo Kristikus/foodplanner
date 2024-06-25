@@ -1,5 +1,7 @@
 import { getData } from './getData.js';
 import { URL_RANDOM_RECIPE } from './api_key.js';
+// import for the global eventListener in the planning.js
+import { openRecipeDetails } from './planning.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const cardContainer = document.getElementById('recipes');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let i = 0; i < 28; i++) {
         const title = data?.recipes[i].title;
         let image = data?.recipes[i].image;
+        const recipeId = data?.recipes[i].id;
 
         if (image === undefined || null) {
           image = defaultImage;
@@ -39,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="card-body d-flex flex-column gap-4">
                 <h2 class="card-title text-center h4">${title}</h2>
                 <p class="card-text">${textSummaryDescription}</p>
-                  <a href="#" class="btn btn-primary bk-secondary border-0" >Voir la recette</a>
+                <div data-recipe-id=${recipeId}>
+                  <a href="#" class="recipe-link btn btn-primary bk-secondary border-0" >Voir la recette</a>
+                </div>
               </div>
             </div>
           </div>
