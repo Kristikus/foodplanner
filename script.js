@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Store the user's information
             const users = JSON.parse(localStorage.getItem('users')) || [];
-            users.push({ username, email, password });
             localStorage.setItem('users', JSON.stringify(users));
             alert('Inscription réussie! Vous pouvez maintenant vous connecter.');
             window.location.href = 'login.html';
@@ -141,4 +140,10 @@ function displayLoggedOutNav() {
     document.querySelector('.nav-not-connected').style.display = 'block';
     document.querySelector('.navbar').style.display = 'none';
 }
+
+const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    const username = user.username;
+
+    const usernameAccount = document.querySelector('.username');
+    usernameAccount.innerHTML = `${username}`;
 
