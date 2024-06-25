@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function getCardRecipes(url) {
     return getData(url).then((data) => {
+      // Nettoyer avant nouvelles recettes //
+      cardContainer.innerHTML = ''; 
       for (let i = 0; i < 28; i++) {
         const title = data?.recipes[i].title;
         let image = data?.recipes[i].image;
@@ -55,6 +57,21 @@ document.addEventListener('DOMContentLoaded', function () {
       cardItem[cardItem.length - 1].classList.add('last-card-item');
     });
   }
+
+
+  // Barre de recherche //
+  // soumission de la recherche //
+  function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('search-input').value;
+    const searchUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${API_KEY}&number=28`;
+    getCardRecipes(searchUrl);
+  }
+  // Ajout écouteur d'événements //
+  const searchForm = document.getElementById('search-form');
+  searchForm.addEventListener('submit', handleSearch);
+
+
 
   getCardRecipes(`${baseUrlRandom}&number=28`);
 
