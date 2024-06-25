@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const recipeLocations = document.querySelectorAll(selector);
           const recipeLocation = recipeLocations[index];
           // Make the recipe title clickable and store the recipe ID
-          recipeLocation.innerHTML = `<a href="#" class="recipe-link">${data[index].title}</a>`;
+          recipeLocation.innerHTML = `<a href="#" class="recipe-link color-tertiary">${data[index].title}</a>`;
           recipeLocation.dataset.recipeId = data[index].id;
         })
         .catch((error) => {
