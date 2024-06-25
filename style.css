@@ -204,3 +204,31 @@ hr {
 #search-button {
     height: 38px;
 }
+
+
+.main-view-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.main-view-error h1 {
+    font-family: 'Kavoon', cursive;
+    font-size: 3rem;
+    margin: 0 0 1rem;
+}
+
+.main-view-error p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.main-view-error a {
+    color: var(--tertiary);
+    text-decoration: none;
+}
