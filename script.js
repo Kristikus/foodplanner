@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logoutButton) {
         logoutButton.addEventListener('click', function() {
             localStorage.removeItem('loggedInUser');
+            sessionStorage.removeItem('dataUrl');
             alert('Déconnexion réussie!');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         });
     }
 });
@@ -65,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show nav if user is not logged in
         document.querySelector('.nav-not-connected').style.display = 'block';
         // Redirect the user to the login page if he tries to go on the planning page while not logged in
-        if (window.location.pathname === '/planning.html' || window.location.pathname === '/recipes.html') {
+        if (window.location.pathname === '/planning.html' || window.location.pathname === '/recipes.html' || window.location.pathname === '/recipe.html') {
             window.location.href = 'login.html';
+            console.log("You need to login");
         }
         
     } 

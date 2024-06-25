@@ -5,15 +5,17 @@ import { openRecipeDetails } from './planning.js';
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const cardContainer = document.getElementById('recipes');
-  const defaultImage =
-    'https://images.unsplash.com/photo-1495195134817-aeb325a55b65?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+  if (localStorage.getItem('loggedInUser') && window.location.pathname === '/recipes.html') {
+    const cardContainer = document.getElementById('recipes');
+    const defaultImage =
+      'https://images.unsplash.com/photo-1495195134817-aeb325a55b65?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
-  function imgError(event) {
-    event.target.src = defaultImage;
-  }
+    function imgError(event) {
+      event.target.src = defaultImage;
+    }
 
-  const baseUrlRandom = URL_RANDOM_RECIPE;
+    const baseUrlRandom = URL_RANDOM_RECIPE;
+
 
   function getCardRecipes(url) {
     console.log('Fetching data from URL:', url); // Vérifier l'URL de la requête //
@@ -31,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let image = data?.recipes[i].image;
         const recipeId = data?.recipes[i].id;
 
-        if (image === undefined || null) {
-          image = defaultImage;
-        }
-
+          if (image === undefined || null) {
+            image = defaultImage;
+          }
 
       // Nettoyer avant nouvelles recettes //
       cardContainer.innerHTML = ''; 
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div data-recipe-id=${recipeId}>
                   <a href="#" class="recipe-link btn btn-primary bk-secondary border-0" >Voir la recette</a>
                 </div>
-
+                
               </div>
             </div>
           </div>
@@ -73,17 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.card-img').forEach(img => {
         img.onerror = imgError;
       });
-
-      const cardItems = document.querySelectorAll('.card-item');
-      if (cardItems.length > 0) {
-        cardItems[cardItems.length - 1].classList.add('last-card-item');
-      }
+    }
+      
     }).catch(error => {
       console.error('Error fetching data:', error);
       cardContainer.innerHTML = '<p>Failed to fetch recipes. Please try again later.</p>'; // Afficher un message d'erreur //
     });
   }
-
+    
   function getSearchRecipes(url) {
     console.log('Fetching data from URL:', url); // Vérifier l'URL de la requête //
     return getData(url).then((data) => {
@@ -152,16 +150,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Récupérer les recettes initiales //
   getCardRecipes(`${baseUrlRandom}&number=28`);
-
-  function getFilteredRecipes(selector, url) {
-    const btnFilter = document.getElementById(selector);
-    btnFilter.addEventListener('click', function (e) {
-      e.preventDefault();
-      cardContainer.innerHTML = '';
-      getCardRecipes(url);
-    });
-  }
-
+  
+    function getFilteredRecipes(selector, url) {
+      const btnFilter = document.getElementById(selector);
+      btnFilter.addEventListener('click', function (e) {
+        e.preventDefault();
+        cardContainer.innerHTML = '';
+        getCardRecipes(url);
+      });
+    }
+  
   getFilteredRecipes('btn-filter-breakfast', `${baseUrlRandom}&number=28&tags=breakfast`);
   getFilteredRecipes('btn-filter-main', `${baseUrlRandom}&number=28&tags=main%20course`);
   getFilteredRecipes('btn-filter-dessert', `${baseUrlRandom}&number=28&tags=dessert`);
