@@ -46,7 +46,7 @@ h1 {
     font-family: 'Kavoon', cursive;
     font-size: 3rem;
     color: var(--secondary);
-    margin: 5rem 0 2.5rem;
+    margin: 4rem 0 2.5rem;
 }
 
 p.description {
@@ -165,6 +165,15 @@ footer img {
 }
 
 /* Planning */
+
+.username {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#welcome>span {
+    font-weight: bold;
+}
 
 .no-border {
     border: none;

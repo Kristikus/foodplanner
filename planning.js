@@ -4,6 +4,7 @@ import { API_KEY } from './api_key.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem('loggedInUser') && window.location.pathname === '/planning.html') {
+
     const daysOfWeek = [
       'Monday',
       'Tuesday',
