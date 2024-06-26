@@ -141,7 +141,9 @@ function displayLoggedOutNav() {
 }
 
 const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    if(user) {
     const username = user.username;
-
     const usernameAccount = document.querySelector('.username');
     usernameAccount.innerHTML = `${username}`;
+    }
+    
