@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             cardContainer.innerHTML += `
             <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-5">
-              <div class="card card-small">
+              <div class="card">
                 <img src="${image}" class="card-img object-fit-cover" alt="...">
                 <div class="card-body d-flex flex-column gap-4">
                   <h2 class="card-title text-center h4">${title}</h2>
@@ -55,11 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
             </div>
           `;
-          
-          
-          
-          
-          
           });
 
           document.querySelectorAll('.card-img').forEach((img) => {
@@ -69,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch((error) => {
           console.error('Error fetching data:', error);
           cardContainer.innerHTML ='<p>Failed to fetch recipes. Please try again later.</p>'; // Afficher un message d'erreur //
-        });
+      });
     }
 
     function getSearchRecipes(url) {
@@ -92,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             cardContainer.innerHTML += `
               <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-5">
-                <div class="card">
+                <div class="card card-small">
                   <img src="${image}" class="card-img object-fit-cover" alt="...">
                   <div class="card-body d-flex flex-column gap-4">
                     <h2 class="card-title text-center h4">${title}</h2>

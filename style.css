@@ -59,7 +59,7 @@ p.description {
     background-color: var(--light);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
 }
 
 label {
@@ -80,20 +80,6 @@ input {
 .signin-prompt-link {
     text-decoration: none;
     color: var(--tertiary);
-}
-
-footer {
-    background-color: var(--secondary);
-    color: var(--light);
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-footer img {
-    height: 40px;
 }
 
 /* Navbar styles */
@@ -137,10 +123,8 @@ footer img {
     padding: 1.8rem;
 }
 
-
 .navbar-brand img {
     height: 40px;
-  
 }
 
 .navbar-brand-if-not-connected {
@@ -185,14 +169,31 @@ hr {
 }
 
 .last-card-item {
-    margin-bottom: 7rem !important;
+    margin-bottom: 8rem !important;
 }
 
 .card > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
+    min-height: 450px;
+}
+
+.card-small > div {
+    min-height: 200px;
+}
+
+/* Couper le texte des cartes */
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#recipe-card {
+    max-width: 600px;
 }
 
 .search-container {
@@ -242,30 +243,6 @@ hr {
     text-decoration: none;
 }
 
-/* uniformiser la hauteur minimale des cartes */
-.card > div, .card-small > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px; 
-}
-
-/* Uniformiser la taille des images dans les cartes */
-.card-img, .card-img-top {
-    height: 200px; 
-    object-fit: cover; /
-    width: 100%;
-}
-
-/* Couper le texte des cartes */
-.card-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Nombre de lignes à affichées */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 /* Conditions d'utilisation */
 .terms-body {
     display: flex;
@@ -297,7 +274,6 @@ hr {
     text-align: left; 
 }
 
-
 .terms-main h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -311,18 +287,18 @@ hr {
 }
 
 /* Footer styles */
-.footer {
+footer {
     background-color: var(--secondary);
     color: var(--light);
     text-align: center;
-    padding: 1rem 0; 
-    position: relative;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
-.footer img {
+footer img {
     height: 40px;
-    margin-bottom: 0.5rem; 
 }
 
 .terms-link {
