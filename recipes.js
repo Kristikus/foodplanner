@@ -42,19 +42,24 @@ document.addEventListener('DOMContentLoaded', function () {
             const textSummaryDescription = div.textContent || div.innerText;
 
             cardContainer.innerHTML += `
-              <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-5">
-                <div class="card">
-                  <img src="${image}" class="card-img object-fit-cover" alt="...">
-                  <div class="card-body d-flex flex-column gap-4">
-                    <h2 class="card-title text-center h4">${title}</h2>
-                    <p class="card-text">${textSummaryDescription}</p>
-                    <div data-recipe-id=${recipeId}>
-                      <a href="#" class="recipe-link btn btn-primary bk-secondary border-0">Voir la recette</a>
-                    </div>
+            <div class="card-item col-12 col-sm-6 col-lg-4 col-xl-3 mb-5">
+              <div class="card card-small">
+                <img src="${image}" class="card-img object-fit-cover" alt="...">
+                <div class="card-body d-flex flex-column gap-4">
+                  <h2 class="card-title text-center h4">${title}</h2>
+                  <p class="card-text">${textSummaryDescription || "No description available."}</p>
+                  <div data-recipe-id=${recipeId}>
+                    <a href="#" class="recipe-link btn btn-primary bk-secondary border-0">Voir la recette</a>
                   </div>
                 </div>
               </div>
-            `;
+            </div>
+          `;
+          
+          
+          
+          
+          
           });
 
           document.querySelectorAll('.card-img').forEach((img) => {
