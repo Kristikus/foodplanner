@@ -102,3 +102,10 @@ function displayLoggedOutNav() {
   document.querySelector('.nav-not-connected').style.display = 'block';
   document.querySelector('.navbar').style.display = 'none';
 }
+
+const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    if(user) {
+    const username = user.username;
+    const usernameAccount = document.querySelector('.username');
+    usernameAccount.innerHTML = `${username}`;
+    }
