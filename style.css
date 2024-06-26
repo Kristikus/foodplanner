@@ -183,7 +183,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 450px;
+    min-height: 300px;
 }
 
 .search-container {
@@ -231,4 +231,98 @@ hr {
 .main-view-error a {
     color: var(--tertiary);
     text-decoration: none;
+}
+
+/* uniformiser la hauteur minimale des cartes */
+.card > div, .card-small > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; 
+}
+
+/* Uniformiser la taille des images dans les cartes */
+.card-img, .card-img-top {
+    height: 200px; 
+    object-fit: cover; /
+    width: 100%;
+}
+
+/* Couper le texte des cartes */
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes à affichées */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Conditions d'utilisation */
+.terms-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.terms-main {
+    flex: 1; /* Prendre toute la place */
+    overflow-y: auto; /* Assurer que le contenu est défilable */
+}
+
+.terms-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.terms-list li {
+    margin-bottom: 2rem; 
+}
+
+
+.terms-container {
+    max-width: 800px; /* Limiter la largeur pour que le texte soit moins étalé */
+    margin: 0 auto; /
+    padding: 2rem; 
+    background-color: var(--primary); 
+    text-align: left; 
+}
+
+
+.terms-main h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; 
+}
+
+.terms-list h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem 0; 
+    position: relative;
+    width: 100%;
+}
+
+.footer img {
+    height: 40px;
+    margin-bottom: 0.5rem; 
+}
+
+.terms-link {
+    display: block;
+    color: var(--light);
+    text-decoration: none;
+    margin-bottom: 0.5rem; 
+}
+
+.terms-link:hover {
+    text-decoration: underline;
 }
