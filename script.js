@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const users = JSON.parse(localStorage.getItem('users')) || [];
             users.push({ username, email, password });
             localStorage.setItem('users', JSON.stringify(users));
-            alert('Inscription réussie! Vous pouvez maintenant vous connecter.');
+            alert('Successful registration! You can now connect.');
             window.location.href = 'login.html';
         });
     }
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (user) {
                 localStorage.setItem('loggedInUser', JSON.stringify(user));
-                alert('Connexion réussie!');
+                alert('Succssful connection!');
                 window.location.href = 'planning.html';
             } else {
-                alert('Email ou mot de passe incorrect.');
+                alert('Incorrect email or password.');
             }
         });
     }
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         logoutButton.addEventListener('click', function() {
             localStorage.removeItem('loggedInUser');
             sessionStorage.removeItem('dataUrl');
-            alert('Déconnexion réussie!');
+            alert('Successful disconnection!');
             window.location.href = 'login.html';
         });
     }
