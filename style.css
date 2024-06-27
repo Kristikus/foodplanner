@@ -46,7 +46,7 @@ h1 {
     font-family: 'Kavoon', cursive;
     font-size: 3rem;
     color: var(--secondary);
-    margin: 5rem 0 2.5rem;
+    margin: 4rem 0 2.5rem;
 }
 
 p.description {
@@ -59,7 +59,7 @@ p.description {
     background-color: var(--light);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
 }
 
 label {
@@ -80,20 +80,6 @@ input {
 .signin-prompt-link {
     text-decoration: none;
     color: var(--tertiary);
-}
-
-footer {
-    background-color: var(--secondary);
-    color: var(--light);
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-footer img {
-    height: 40px;
 }
 
 /* Navbar styles */
@@ -137,10 +123,8 @@ footer img {
     padding: 1.8rem;
 }
 
-
 .navbar-brand img {
     height: 40px;
-  
 }
 
 .navbar-brand-if-not-connected {
@@ -166,6 +150,15 @@ footer img {
 
 /* Planning */
 
+.username {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#welcome>span {
+    font-weight: bold;
+}
+
 .no-border {
     border: none;
 }
@@ -176,7 +169,7 @@ hr {
 }
 
 .last-card-item {
-    margin-bottom: 7rem !important;
+    margin-bottom: 8rem !important;
 }
 
 .card > div {
@@ -184,4 +177,137 @@ hr {
     align-items: center;
     justify-content: center;
     min-height: 450px;
+}
+
+.card-small > div {
+    min-height: 200px;
+}
+
+/* Couper le texte des cartes */
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#recipe-card {
+    max-width: 600px;
+}
+
+.search-container {
+    display:flex;
+    align-items: center;
+}
+
+.search-container input {
+    margin-bottom: 0;
+}
+
+#search-input {
+    height: 38px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#search-button {
+    height: 38px;
+}
+
+
+.main-view-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.main-view-error h1 {
+    font-family: 'Kavoon', cursive;
+    font-size: 3rem;
+    margin: 0 0 1rem;
+}
+
+.main-view-error p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.main-view-error a {
+    color: var(--tertiary);
+    text-decoration: none;
+}
+
+/* Conditions d'utilisation */
+.terms-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.terms-main {
+    flex: 1; /* Prendre toute la place */
+    overflow-y: auto; /* Assurer que le contenu est défilable */
+}
+
+.terms-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.terms-list li {
+    margin-bottom: 2rem; 
+}
+
+
+.terms-container {
+    max-width: 800px; /* Limiter la largeur pour que le texte soit moins étalé */
+    margin: 0 auto; /
+    padding: 2rem; 
+    background-color: var(--primary); 
+    text-align: left; 
+}
+
+.terms-main h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; 
+}
+
+.terms-list h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 40px;
+}
+
+.terms-link {
+    display: block;
+    color: var(--light);
+    text-decoration: none;
+    margin-bottom: 0.5rem; 
+}
+
+.terms-link:hover {
+    text-decoration: underline;
 }
